@@ -191,7 +191,7 @@ function createDynamicHtml() {
     // Вешаем на кнопку функционал
     document.querySelector('.purchased-button').addEventListener('click', (event) => {
         if (itemsContainer.childElementCount < 3) return
-        console.log('Кнопка была нажата.');
+        console.log('Кнопка была нажата. ');
         window.location.href = 'https://lavka.yandex.ru';
     });
 
