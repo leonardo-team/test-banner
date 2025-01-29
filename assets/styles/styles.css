@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.banner-wrapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 28px;
+    background-color: whitesmoke;
+    width: 300px;
+    height: 600px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-container {
+    display: flex;
+    width: 212px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.header-image {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+}
+
+.top-banner {
+    z-index: 20;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    position: absolute;
+    top: 11px;
+}
+
+.backdrop {
+    background-color: rgba(52, 73, 94, 1);
+    width: 196px;
+    top: 0;
+    height: 288px;
+    padding-top: 19px;
+    box-sizing: border-box;
+}
+
+.banner-shadow {
+    object-fit: contain;
+    object-position: center;
+    z-index: 10;
+    width: 197px;
+}
+
+.footer-image {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.gray-separator {
+    background-color: rgba(189, 195, 199, 1);
+    display: flex;
+    min-height: 20px;
+    width: 100%;
+}
+
+.bottom-container {
+    background-color: rgba(230, 126, 34, 1);
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    height: 91px;
+    width: 100%;
+    margin-top: 41px;
+}
+
+.bottom-bar {
+    background-color: rgba(211, 84, 0, 1);
+    display: flex;
+    height: 21px;
+}
+
+.basket-wrapp {
+    position: absolute;
+    width: 276px;
+    height: 325px;
+    z-index: 50;
+    top: 373px;
+}
+
+.basket-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.basket {
+    width: 100%;
+    position: relative;
+    z-index: 70;
+}
+.basket-items {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 170px;
+    gap: 0;
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 27px;
+}
+
+.basket-items > * {
+    margin-right: -15px;
+}
+
+@keyframes blink {
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.purchased-button {
+    z-index: 70;
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: -0.005em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 174px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    color: #21201F;
+    background-color: #FCE000;
+    top: 152px;
+    border: 1px solid #FCE000;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .6s ease-in-out;
+}
+
+.blink-button {
+    animation-name: blink;
+    animation-duration: 1.7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.mouse-event-allowed,
+button {
+    pointer-events: auto;
+}
+
+.purchased-button.show {
+    opacity: 1;
+}
+
+.container {
+    width: 100%;
+    max-width: 211px;
+    min-height: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    position: relative;
+    z-index: 30;
+}
+
+.section-divider {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    position: relative;
+    margin-top: -15px;
+}
+
+.highlight-bar {
+    background-color: rgba(241, 196, 15, 1);
+    z-index: 10;
+    display: flex;
+    height: 8px;
+    width: 100%;
+    position: relative;
+}
+
+.dark-bar {
+    background-color: rgba(29, 42, 54, 1);
+    width: 196px;
+    margin-top: -4px;
+    height: 25px;
+}
+
+.section {
+    z-index: 40;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.object {
+    position: relative;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.object:hover {
+    transform: scale(1.15);
+}
